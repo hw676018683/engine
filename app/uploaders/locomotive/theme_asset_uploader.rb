@@ -30,6 +30,7 @@ module Locomotive
       list.delete(:pdf)
       list
     end
+    ::CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
 
   end
 end

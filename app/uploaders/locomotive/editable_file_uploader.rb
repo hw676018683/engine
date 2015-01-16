@@ -10,6 +10,7 @@ module Locomotive
     def store_dir
       self.build_store_dir('sites', model.page.site_id, 'pages', model.page.id, 'files')
     end
+    ::CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
 
   end
 end

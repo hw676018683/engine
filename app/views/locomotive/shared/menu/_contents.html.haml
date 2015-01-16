@@ -47,5 +47,5 @@
             - content_type.entries.latest_updated.each do |entry|
               %li
                 %i.icon-chevron-right
-                = link_to truncate(entry._label(content_type), length: 20), edit_content_entry_path(content_type.slug, entry)
+                = link_to truncate(URI.decode(entry._label(content_type)), length: 20), edit_content_entry_path(content_type.slug, entry)
                 %span= time_ago_in_words(entry.updated_at)

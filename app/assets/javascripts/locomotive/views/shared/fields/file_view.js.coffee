@@ -22,7 +22,7 @@ class Locomotive.Views.Shared.Fields.FileView extends Backbone.View
   render: ->
     url   = @model.get("#{@options.name}_url") || ''
     data  =
-      filename: url.split('/').pop()
+      filename: decodeURI(url.split('/').pop())
       url:      url
 
     $(@el).html(@template()(data))

@@ -10,6 +10,5 @@ module Locomotive
     end
     ::CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
 
-
   end
 end
